@@ -1,3 +1,2 @@
 # sourcewang.github.io
-## [sourcewang.github.io](sourcewang.github.io)
-##### `code`
+## [sourcewang.github.io](http://sourcewang.github.io)
