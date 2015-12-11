@@ -3,65 +3,134 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>__隐约雷鸣</title>
+    <title>Twilight for the Gods</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link href="stylesheets/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/animate.min.css" type="text/css" rel="stylesheet">
     <link href="stylesheets/buttons.css" type="text/css" rel="stylesheet">
     <script src="javascripts/jquery-1.11.3.min.js"></script>
     <script src="javascripts/bootstrap.min.js"></script>
+    <style>
+        *{
+
+        }
+    </style>
 </head>
 <body>
 <!--导航栏-->
-<div class="navbar navbar-inverse">
+<!--<div class="navbar navbar-inverse">-->
+<div class="navbar navbar-default">
     <div class="container">
         <div class="navbar-brand">
             <span class="glyphicon glyphicon-qrcode" id="qrcode"></span>
         </div>
         <div class="navbar-brand">
-            SourceWang
+            Odin
         </div>
         <div class="collapse navbar-collapse">
             <div class="navbar-form navbar-right">
-                <input type="text" placeholder="搜索" autofocus class="form-control">
-                <button class="btn btn-success">GO</button>
+                <input type="text" placeholder="Search..." autofocus class="form-control">
+                <button class="button button-glow button-border button-rounded button-primary">GO</button>
             </div>
             <ul class="nav nav-pills navbar-nav" id="nav">
                 <!--鼠标滑过特效-->
-                <li><a href="#">小旋风</a></li>
-                <li class="active"><a href="#">大王</a></li>
-                <li><a href="#">叫我</a></li>
-                <li><a href="#">来</a></li>
-                <li><a href="#">巡山啊！</a></li>
+                <li><a href="#">Home</a></li>
+                <li class="active"><a href="#">Personal Center</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
             </ul>
+            <!--<div class="navbar-btn btn-group">-->
+            <!--<button class="btn btn-info dropdown-toggle" data-toggle="dropdown">-->
+            <!--Action <span class="caret"></span>-->
+            <!--</button>-->
+            <!--<ul class="dropdown-menu">-->
+            <!--<li><a href="#">Action</a></li>-->
+            <!--<li><a href="#">Another action</a></li>-->
+            <!--<li><a href="#">Something else here</a></li>-->
+            <!--<li role="separator" class="divider"></li>-->
+            <!--<li><a href="#">Separated link</a></li>-->
+            <!--</ul>-->
+            <!--</div>-->
         </div>
     </div>
 </div>
-<!--banner 部分-->
-<div class="container bg-primary">
-    <div class="">
-        <img src="images/banner2.jpg" class="img-responsive center-block">
-        <!--轮播-->
-    </div>
-</div>
-<hr/>
 <!--主体部分-->
 <div class="container">
     <div class="row">
-        <div class="col-md-6 bg-success text-center">
-            <img src="images/1.jpg" class="img-responsive">
-            <button class="button button-glow button-border button-rounded button-primary">Samba</button>
+        <div class="col-md-4">
+            <!--导航条-->
+            <div class="">
+                <ul class="nav nav-tabs nav-justified" id="nav-justified">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Messages</a></li>
+                </ul>
+                <!--<hr/>-->
+                <div class="alert alert-info" id="alert-1">
+                    f
+                </div>
+                <div class="alert alert-success" id="alert-2">
+                    f
+                </div>
+                <div class="alert alert-warning" id="alert-3">
+                    f
+                </div>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col-sm-3">
+                    <ul class="nav nav-pills nav-stacked" id="nav-stacked">
+                        <li class="active"><a href="#">test1</a></li>
+                        <li><a href="#">test1</a></li>
+                        <li><a href="#">test1</a></li>
+                        <li><a href="#">test1</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-9">
+                    <div class="container-fluid">
+                        <div class="panel panel-info" id="panel-1">
+                            <div class="panel-heading">
+                                <!--<p class="panel-title">c</p>-->
+                                test 1
+                            </div>
+                            <div class="panel-body">
+                                test 1
+                            </div>
+                        </div>
+                        <div class="panel panel-warning" id="panel-2">
+                            <div class="panel-heading">
+                                <!--<p class="panel-title">c</p>-->
+                                test 2
+                            </div>
+                            <div class="panel-body">
+                                test 2
+                            </div>
+                        </div>
+                        <div class="panel panel-success" id="panel-3">
+                            <div class="panel-heading">
+                                <!--<p class="panel-title">c</p>-->
+                                test 3
+                            </div>
+                            <div class="panel-body">
+                                test 3
+                            </div>
+                        </div>
+                        <div class="panel panel-danger" id="panel-4">
+                            <div class="panel-heading">
+                                <!--<p class="panel-title">c</p>-->
+                                test 4
+                            </div>
+                            <div class="panel-body">
+                                test 4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6 bg-danger text-center">
-            <button class="button button-glow button-border button-rounded button-primary">Lighttpd</button>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6 bg-info text-center">
-            <button class="button button-glow button-border button-rounded button-primary">Android</button>
-        </div>
-        <div class="col-md-6 bg-warning text-center ">
-            <button class="button button-glow button-border button-rounded button-primary">Node</button>
+        <div class="col-md-8">
+            8
         </div>
     </div>
 </div>
@@ -69,15 +138,39 @@
     $(document).ready(function () {
 //脚本开始
         $('#nav li').mouseover(function () {
-            $(this).addClass('active').siblings().removeClass('active')
-        })
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+        $('#panel-1').siblings().hide();
+        $('#nav-stacked li').mouseover(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+            if ($(this).index() == 0) {
+                $('#panel-1').show(300).siblings().stop(true, true).hide(300);
+            }
+            if ($(this).index() == 1) {
+                $('#panel-2').show(300).siblings().stop(true, true).hide(300);
+            }
+            if ($(this).index() == 2) {
+                $('#panel-3').show(300).siblings().stop(true, true).hide(300);
+            }
+            if ($(this).index() == 3) {
+                $('#panel-4').show(300).siblings().stop(true, true).hide(300);
+            }
+        });
+        $('#alert-1').siblings('div').hide();
+        $('#nav-justified li').mouseover(function(){
+            $(this).addClass('active').siblings().removeClass('active');
+//            cursor: pointer;
+            if ($(this).index() == 0) {
+                $('#alert-1').show(300).siblings('div').stop(true, true).hide(300);
+            }
+            if ($(this).index() == 1) {
+                $('#alert-2').show(300).siblings('div').stop(true, true).hide(300);
+            }
+            if ($(this).index() == 2) {
+                $('#alert-3').show(300).siblings('div').stop(true, true).hide(300);
+            }
+        });
 
-//        var $qrcodeimg = '<img src="images/qrcode.png" class="img-thumbnail"/>'
-//        $('#qrcode').mouseover(function(e){
-//            $(this).append($qrcodeimg)
-//        }).mouseout(function(){
-//            $(this).remove($qrcodeimg)
-//        })
 //脚本结束
     })
 </script>
