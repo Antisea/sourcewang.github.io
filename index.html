@@ -11,15 +11,15 @@
     <script src="javascripts/jquery-1.11.3.min.js"></script>
     <script src="javascripts/bootstrap.min.js"></script>
     <style>
-        *{
-
+        body {
+            background: #9d9d9d url("images/black.jpg") repeat 0 0;
         }
     </style>
 </head>
 <body>
 <!--导航栏-->
-<!--<div class="navbar navbar-inverse">-->
-<div class="navbar navbar-default">
+<div class="navbar navbar-inverse">
+    <!--<div class="navbar navbar-default">-->
     <div class="container">
         <div class="navbar-brand">
             <span class="glyphicon glyphicon-qrcode" id="qrcode"></span>
@@ -68,13 +68,13 @@
                 </ul>
                 <!--<hr/>-->
                 <div class="alert alert-info" id="alert-1">
-                    f
+                    home
                 </div>
                 <div class="alert alert-success" id="alert-2">
-                    f
+                    profile
                 </div>
                 <div class="alert alert-warning" id="alert-3">
-                    f
+                    message
                 </div>
             </div>
             <hr/>
@@ -157,7 +157,7 @@
             }
         });
         $('#alert-1').siblings('div').hide();
-        $('#nav-justified li').mouseover(function(){
+        $('#nav-justified li').mouseover(function () {
             $(this).addClass('active').siblings().removeClass('active');
 //            cursor: pointer;
             if ($(this).index() == 0) {
