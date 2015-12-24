@@ -16,6 +16,9 @@
 <div class="navbar navbar-inverse">
     <div class="container">
         <div class="navbar-brand">
+            <span class="glyphicon glyphicon-qrcode" id="qrcode"></span>
+        </div>
+        <div class="navbar-brand">
             SourceWang
         </div>
         <div class="collapse navbar-collapse">
@@ -46,6 +49,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 bg-success text-center">
+            <img src="images/1.jpg" class="img-responsive">
             <button class="button button-glow button-border button-rounded button-primary">Samba</button>
         </div>
         <div class="col-md-6 bg-danger text-center">
@@ -56,18 +60,24 @@
         <div class="col-md-6 bg-info text-center">
             <button class="button button-glow button-border button-rounded button-primary">Android</button>
         </div>
-        <div class="col-md-6 bg-warning text-center">
+        <div class="col-md-6 bg-warning text-center ">
             <button class="button button-glow button-border button-rounded button-primary">Node</button>
         </div>
     </div>
 </div>
 <script>
     $(document).ready(function () {
+//脚本开始
         $('#nav li').mouseover(function () {
-            $('#nav li').addClass('active animated swing')
-        }).mouseout(function () {
-            $('#nav li').removeClass('active animated swing')
+            $(this).addClass('active').siblings().removeClass('active')
         })
+
+//        var $qrcodeimg = '<img src="images/qrcode.png" class="img-thumbnail"/>'
+//        $('#qrcode').mouseover(function(e){
+//            $(this).append($qrcodeimg)
+//        }).mouseout(function(){
+//            $(this).remove($qrcodeimg)
+//        })
 //脚本结束
     })
 </script>
