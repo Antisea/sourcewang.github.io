@@ -10,14 +10,7 @@ This is an H2
 
 ###### 这是 H6
 
-# 这是 H1 #
-
-## 这是 H2 ##
-
-### 这是 H3 ######
 区块引用 Blockquotes
-
-Markdown 标记区块引用是使用类似 email 中用 > 的引用方式。如果你还熟悉在 email 信件中的引言部分，你就知道怎么在 Markdown 文件中建立一个区块引用，那会看起来像是你自己先断好行，然后在每行的最前面加上 > ：
 
 > This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
 > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
