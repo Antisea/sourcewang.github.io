@@ -1,19 +1,4 @@
 
-要建立一个行内式的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如：
-
-This is [an example](http://example.com/ "Title") inline link.
-
-[This link](http://example.net/) has no title attribute.
-会产生：
-
-<p>This is <a href="http://example.com/" title="Title">
-an example</a> inline link.</p>
-
-<p><a href="http://example.net/">This link</a> has no
-title attribute.</p>
-如果你是要链接到同样主机的资源，你可以使用相对路径：
-
-See my [About](/about/) page for details.
 参考式的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：
 
 This is [an example][id] reference-style link.
