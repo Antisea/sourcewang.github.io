@@ -15,7 +15,6 @@
   * 兼容 ie 浏览器的 respond.js 
 * helloworld 一個簡單的證明能夠打開的 demo，只有 index.html 
 * htdocs 放置網頁內容
-
-  > --- blogs 放置博客文章
-  > --- comments 放置評論的內容
+  * blogs 放置博客文章
+  * comments 放置評論的內容
 
