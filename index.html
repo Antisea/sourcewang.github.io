@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Someone like you!</title>
+    <link href="b/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
+        body {
+            line-height: 2.8;
+            list-style: none;
+            text-decoration: none;
+            font-family: Georgia, "Times New Roman", "微软雅黑", Times, serif;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="container-fluid bg-info text-center text-danger">
+        nav bar
+    </div>
+    <!--end of nav bar-->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="page-header text-primary">
+                Linux Tools
+            </div>
+            <div class="list-group">
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">ifconfig</h4>
+
+                    <p class="list-group-item-text text-info"> &nbsp;&nbsp;&nbsp;configure a network interface</p>
+                </a>
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">iwconfig</h4>
+
+                    <p class="list-group-item-text text-info"> &nbsp;&nbsp;&nbsp;configure a wireless network
+                        interface</p>
+                </a>
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">dhclient</h4>
+
+                    <p class="list-group-item-text text-info"> &nbsp;&nbsp;&nbsp;dynamic host configuration protocol
+                        client</p>
+                </a>
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">udhcpc</h4>
+
+                    <p class="list-group-item-text text-info"> &nbsp;&nbsp;&nbsp;the swiss army knife of embedded
+                        linux</p>
+                </a>
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">openssl</h4>
+
+                    <p class="list-group-item-text text-info"> &nbsp;&nbsp;&nbsp;openssl command line tool</p>
+                </a>
+                <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">dd</h4>
+
+                    <p class="list-group-item-text text-info"> &nbsp;&nbsp;&nbsp;convert and copy a file</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="page-header text-primary">
+                Web Frontend
+            </div>
+        </div>
+    </div>
+    <!--end of row 1-->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="page-header text-primary">
+                Android & Java
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item">blabla...</li>
+                <li class="list-group-item">blabla...</li>
+                <li class="list-group-item">blabla...</li>
+                <li class="list-group-item">blabla...</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <div class="page-header text-primary">
+                Other Tips
+            </div>
+        </div>
+    </div>
+    <!--end of row 2-->
+</div>
+<!--end of container-->
+
+<div class="modal-footer">
+    blablablabla... &nbsp;&copy;&nbsp; <a href="javascript:void();">sourcewang</a>
+</div>
+
+<script type="text/javascript" src="a/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="a/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('.list-group-item').click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+    })
+</script>
+</body>
+</html>
