@@ -1,0 +1,152 @@
+---
+layout: post
+title: 使用libxml2来修改xml文件
+---
+
+将网页POST转码以后的数据进行解码，然后借助libxml2的函数将数据保存到xml文件中
+
+## 示例代码 + 解释   
+
+<pre>
+/* version v3
+support chinese and utf-8
+ */
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <libxml/parser.h>
+
+char ip[1024], netmask[1024], gateway[1024], dns[1024];
+
+void urlDecode(char *p) {  /*将网页POST编码过的data进行解码，变成正常的字符*/
+
+	register i = 0;
+
+	while (*(p + i)) {
+		if ((*p = *(p + i)) == '%') {
+			*p = *(p + i + 1) >= 'A' ? ((*(p + i + 1) & 0xdf) - 'A') + 10 : (*(p + i + 1) - '0');
+			*p = (*p) * 16;
+			*p += *(p + i + 2) >= 'A' ? ((*(p + i + 2) & 0xdf) - 'A') + 10 : (*(p + i + 2) - '0');
+			i += 2;
+		} else if (*(p + i) == '+') {
+			*p = ' ';
+		}
+		p++;
+	}
+	*p = '\0';
+}
+
+void parseXml(xmlDocPtr doc, xmlNodePtr cur) {
+
+	cur = cur->xmlChildrenNode;
+
+	while (cur != NULL) {
+		if (!xmlStrcmp(cur->name, (const xmlChar *) "ip")) {
+			xmlNodeSetContent(cur, BAD_CAST ip);    /*找到ip节点，并将数组ip[1024]的数据写入节点中*/
+		}
+		if (!xmlStrcmp(cur->name, (const xmlChar *) "netmask")) {
+			xmlNodeSetContent(cur, BAD_CAST netmask);
+		}
+		if (!xmlStrcmp(cur->name, (const xmlChar *) "gateway")) {
+			xmlNodeSetContent(cur, BAD_CAST gateway);
+		}
+		if (!xmlStrcmp(cur->name, (const xmlChar *) "dns")) {
+			xmlNodeSetContent(cur, BAD_CAST dns);
+			break;
+		}
+
+		cur = cur->next;
+	}
+}
+
+xmlDocPtr parseDoc (char *docname) {
+
+	xmlDocPtr doc;
+	xmlNodePtr cur;
+
+	doc = xmlParseFile(docname);
+
+	if (doc == NULL) {
+		printf("Document parsed ERROR !!!\n");
+		return;
+	}
+
+	cur = xmlDocGetRootElement(doc);
+
+	if (cur == NULL) {
+		printf("Empty document\n");
+		return;
+	}
+
+	if (xmlStrcmp(cur->name, (const xmlChar *) "xml")) {
+		printf("Document root node is not xml\n");
+		xmlFreeDoc(doc);
+		return;
+	}
+
+	cur = cur->xmlChildrenNode;
+
+	while (cur != NULL) {
+		if (!xmlStrcmp(cur->name, (const xmlChar *) "ethernet")) {
+			parseXml(doc, cur);    /*继续遍历子节点，找到要找的节点*/
+		}
+
+		cur = cur->next;
+	}
+
+	return doc;
+
+}
+
+int main(void) {
+	printf("Content-Type:text/html\n\n");
+
+	int ilen;
+	char *slen;
+	char buf[1024];
+
+	char *docname;
+	xmlDocPtr docPtr;
+
+	docname = "./test.xml";
+
+	/* get post data length */
+	slen = getenv("CONTENT_LENGTH");
+	ilen = atoi(slen);
+
+	while (1) {
+		if (slen == NULL) {
+			printf("post data error!!");
+			break;
+		} else {
+			fgets(buf, ilen+1, stdin);
+			urlDecode(buf);
+			printf("%s", buf);
+			printf("<br/>");
+			/*split string*/
+			sscanf(buf, "ip=%[^&]&netmask=%[^&]&gateway=%[^&]&dns=%s", ip, netmask, gateway, dns);
+			printf("<br/>%s", ip);
+			printf("<br/>%s", netmask);
+			printf("<br/>%s", gateway);
+			printf("<br/>%s", dns);
+			break;
+		}
+	}
+
+	docPtr = parseDoc(docname);  /*解析xml文件，遍历其子节点，找到要找的节点，然后在进行更深一步的遍历查找*/
+
+	if (docPtr != NULL)
+	{
+//		xmlSaveFormatFile(docname, docPtr, 1);
+		xmlSaveFormatFileEnc(docname, docPtr, "UTF-8", 1);  /*以utf-8的形式将docPtr文档指针的内容保存到文件docname中去，数字1表示格式对齐*/
+		printf("<br/>OK!! Data saved\n");
+		xmlFreeDoc(docPtr);
+	}
+
+	return 0;
+}
+
+</pre>
+
+

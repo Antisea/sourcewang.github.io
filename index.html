@@ -1,155 +1,91 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Someone like you!</title>
-    <link href="b/bootstrap.min.css" type="text/css" rel="stylesheet">
-    <style type="text/css">
-        * {
-            margin: 0;
-            padding: 0;
-        }
+---
+layout: default
+menu: home
+class: home
+css: ['pages/index.css']
+---
 
-        body {
-            line-height: 2.8;
-            list-style: none;
-            text-decoration: none;
-            font-family: Georgia, "Times New Roman", "微软雅黑", Times, serif;
-        }
-    </style>
-</head>
-<body>
-<div class="container">
-    <div class="container-fluid bg-info text-center text-danger">
-        Initial version v0.0.1
-    </div>
-    <!--end of nav bar-->
-    <div class="row">
-        <div class="col-md-6">
-            <div class="page-header text-primary">
-                Linux Tools
-            </div>
-            <div class="list-group">
-                <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">ifconfig</h4>
-
-                    <p class="list-group-item-text text-info"> &nbsp;&nbsp;&nbsp;configure a network interface</p>
-                </a>
-                <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">iwconfig</h4>
-
-                    <p class="list-group-item-text text-info"> &nbsp;&nbsp;&nbsp;configure a wireless network
-                        interface</p>
-                </a>
-                <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">dhclient</h4>
-
-                    <p class="list-group-item-text text-info"> &nbsp;&nbsp;&nbsp;dynamic host configuration protocol
-                        client</p>
-                </a>
-                <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">udhcpc</h4>
-
-                    <p class="list-group-item-text text-info"> &nbsp;&nbsp;&nbsp;the swiss army knife of embedded
-                        linux</p>
-                </a>
-                <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">openssl</h4>
-
-                    <p class="list-group-item-text text-info"> &nbsp;&nbsp;&nbsp;openssl command line tool</p>
-                </a>
-                <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">dd</h4>
-
-                    <p class="list-group-item-text text-info"> &nbsp;&nbsp;&nbsp;convert and copy a file</p>
-                </a>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="page-header text-primary">
-                Web Develop
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">HTML/CSS/JavaScript</h4>
-                        </div>
-                        <div class="panel-body">
-                            blabalbal...
-                        </div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">NodeJs + MongoDB + Jade</h4>
-                        </div>
-                        <div class="panel-body">
-                            blabalbal...
-                        </div>
-                    </div>
-                </div>
-                <!--end of col-md-6-->
-                <div class="col-md-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">LAMP</h4>
-                        </div>
-                        <div class="panel-body">
-                            blablabal...
-                        </div>
-                    </div>
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">PS</h4>
-                        </div>
-                        <div class="panel-body">
-                            blablalbal...
-                        </div>
-                    </div>
+<section class="banner">
+    <div class="collection-head">
+        <div class="container">
+            <div class="collection-title">
+                <h1 class="collection-header" id="chuan-title">Source is not only a Cool Boy ~</span></h1>
+                <div class="collection-info">
+                    <span class="meta-info">
+                        <span class="octicon octicon-location"></span>
+                        YanTai, China
+                    </span>
+                    <span class="meta-info">
+                        <span class="octicon octicon-organization"></span>
+                        <a href="#Foxconn" target="_blank">Foxconn Inc.</a>
+                    </span>
+                     <span class="meta-info last-updated">
+                        <span class="octicon octicon-mark-github"></span>
+                        <a href="https://github.com/SourceWang" target="_blank">SourceWang</a>
+                    </span>
                 </div>
             </div>
         </div>
     </div>
-    <!--end of row 1-->
-    <div class="row">
-        <div class="col-md-6">
-            <div class="page-header text-primary">
-                Android & Java
-            </div>
-            <ul class="list-group">
-                <li class="list-group-item">blabla...</li>
-                <li class="list-group-item">blabla...</li>
-                <li class="list-group-item">blabla...</li>
-                <li class="list-group-item">blabla...</li>
-            </ul>
+</section>
+<!-- /.banner -->
+<section class="container content">
+    <div class="columns">
+        <div class="column two-thirds" >
+            <ol class="repo-list">
+                {% for post in paginator.posts %}
+                <li class="repo-list-item">
+                    <h3 class="repo-list-name">
+                        <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                    </h3>
+                    <p class="repo-list-description">
+                        {{ post.excerpt | strip_html | strip }}
+                    </p>
+                    <p class="repo-list-meta">
+                        <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
+						&nbsp;&nbsp;
+						<span class="octicon octicon-calendar"></span> github
+                    </p>
+                </li>
+                {% endfor %}
+            </ol>
         </div>
-        <div class="col-md-6">
-            <div class="page-header text-primary">
-                Other Tips
-            </div>
-            <div class="jumbotron">
-                Error Summary <br/>
-                ...<br/>
-                blablabal...
-            </div>
+        <div class="column one-third">
+            {% include sidebar-search.html %}
+            {% include sidebar-popular-repo.html %}
+            {% include sidebar-contribute-repo.html %}
         </div>
     </div>
-    <!--end of row 2-->
-</div>
-<!--end of container-->
-
-<div class="modal-footer">
-    blablablabla... &nbsp;&copy;&nbsp; <a href="javascript:void();">sourcewang</a>
-</div>
-
-<script type="text/javascript" src="a/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="a/bootstrap.min.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $('.list-group-item').click(function () {
-            $(this).addClass('active').siblings().removeClass('active');
-        });
-    })
-</script>
-</body>
-</html>
+    <div class="pagination text-align">
+      <div class="btn-group">
+        {% if paginator.previous_page %}
+          {% if paginator.previous_page == 1 %}
+              <a href="/" class="btn btn-outline">&laquo;</a>
+          {% else %}
+              <a href="/page{{paginator.previous_page}}"  class="btn btn-outline">&laquo;</a>
+          {% endif %}
+        {% else %}
+            <button disabled="disabled" href="javascript:;" class="btn btn-outline">&laquo;</button>
+        {% endif %}
+        {% if paginator.page == 1 %}
+            <a href="javascript:;" class="active btn btn-outline">1</a>
+        {% else %}
+            <a href="/"  class="btn btn-outline">1</a>
+        {% endif %}
+        {% for count in (2..paginator.total_pages) %}
+          {% if count == paginator.page %}
+              <a href="javascript:;"  class="active btn btn-outline">{{count}}</a>
+          {% else %}
+              <a href="/page{{count}}"  class="btn btn-outline">{{count}}</a>
+          {% endif %}
+        {% endfor %}
+        {% if paginator.next_page %}
+            <a href="/page{{paginator.next_page}}"  class="btn btn-outline">&raquo;</a>
+        {% else %}
+            <button disabled="disabled" href="javascript:;" class="btn btn-outline">&raquo;</button>
+        {% endif %}
+        </div>
+    </div>
+    <!-- /pagination -->
+</section>
+<!-- /section.content -->
