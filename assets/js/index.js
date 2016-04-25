@@ -13,7 +13,7 @@ setInterval(function(){
                 $("#chuan-title").html("aha, Source is so cool, right?");
                 break;
             case 1:
-                $("#chuan-title").html("Intrested in LDD and HTML.");
+                $("#chuan-title").html("I'm intrested in LDD and Web.");
                 break;
             case 2:
                 $("#chuan-title").html("I'm going to be a Full Stack developer!!!");
@@ -25,7 +25,7 @@ setInterval(function(){
                 $("#chuan-title").html("To be a CTO? Yeah!! It's one of my dreams.");
                 break;
             case 5:
-                $("#chuan-title").html("My dream will come true.");
+                $("#chuan-title").html("I believe my dreams will come true.");
                 break;
             default:
                 $("#chuan-title").html("世上无难事，只要肯放弃（毒鸡汤）");
