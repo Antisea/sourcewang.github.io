@@ -1,17 +1,24 @@
 ## 微醺
 
-> SourceWang 邮箱：1154722015@qq.com   
+> SourceWang 邮箱：1154722015@qq.com  
 
 ## FORK
 
-forked from [DONGChuan/DONGChuan.github.io](https://github.com/DONGChuan/DONGChuan.github.io "DONGChuan's Personal Blog")
+> Forked from [DONGChuan/DONGChuan.github.io](https://github.com/DONGChuan/DONGChuan.github.io "DONGChuan's Personal Blog"), thx
 
 ## 如何使用
 
 1. fork
-2. 修改CNAME
-3. 删除\_post 底下的文章，写你自己的文章
+2. modify CNAME file
+3. go to DNSpot to get one register account
+ * add a record which points to your domain name, which name you write in CNAME file, or points to an ip address
+ * you can get an ip address via : *ping your-project-name.github.io*
+4. modify disqus plugins
+ * if you do not change this, all comments will be pushed to my website
+5. remove all of my articles, and add yours
+6. you can type the domain name you owned to chech if it works well
+7. TBD.
 
 ## Help
 
-如果你有遇到任何问题，请联系我
+> 如果你有遇到任何问题，请联系我(*if there is any problem, plz let me know,thank you.*)
