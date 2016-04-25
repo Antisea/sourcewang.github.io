@@ -1,12 +1,12 @@
-## 微醺
+## About
 
-> SourceWang 邮箱：1154722015@qq.com  
+> SourceWang E-mail：1154722015@qq.com  
 
 ## FORK
 
-> Forked from [DONGChuan/DONGChuan.github.io](https://github.com/DONGChuan/DONGChuan.github.io "DONGChuan's Personal Blog"), thx
+> Forked from [DONGChuan/DONGChuan.github.io](https://github.com/DONGChuan/DONGChuan.github.io "DONGChuan's Personal Blog"), thank you.
 
-## 如何使用
+## How to use
 
 1. fork
 2. modify CNAME file
