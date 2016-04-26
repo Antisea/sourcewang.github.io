@@ -6,7 +6,7 @@ menu: About
 ---
 {% assign current_year = site.time | date: '%Y' %}
 
-SourceWang
+SourceWang {{ current_year }}
 ===
 
 ## Contact
