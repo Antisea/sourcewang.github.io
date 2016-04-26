@@ -23,13 +23,6 @@ SourceWang
     {% endfor %}
 </div>
 
-#### J2EE Developer Keywords
-<div class="btn-inline">
-    {% for keyword in site.skill_j2ee_keywords %}
-    <button class="btn btn-outline" type="button">{{ keyword }}</button>
-    {% endfor %}
-</div>
-
 #### Mobile Developer Keywords
 <div class="btn-inline">
     {% for keyword in site.skill_mobile_app_keywords %}
