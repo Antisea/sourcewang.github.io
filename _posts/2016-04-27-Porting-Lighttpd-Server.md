@@ -7,12 +7,14 @@ Porting lighttpd server to arm board
 
 ## Lighttpd
 
-Lighttpd version: 1.4.39
+Lighttpd version: 1.4.39   
 GCC tool chain: arm-none-linux-gnueabi
 
 在此之前，你必须首先交叉编译好pcre, zlib, openssl
 
 ### Configuration
+
+* configure
 
 {% highlight shell %}
 
@@ -38,7 +40,8 @@ CFLAGS="-I/home/sourcewang/opt/pcre-8.36-arm/include -I/home/sourcewang/opt/zlib
 
 ##### CGI enable
 
-`
+{% highlight java %}
+
 server.modules = (
 	"mod_access",
 	"mod_cgi",  //enable cgi module
@@ -48,13 +51,15 @@ server.modules = (
 cgi.assign = (
 	".cgi" => ""   //指定以.cgi 为后缀的文件用什么方式执行，空表示自动寻找能执行.cgi 文件的程式来执行
 )
-`
+
+{% endhighlight %}
 
 ##### FASTCGI enable to run with php
 
 修改fastcgi.conf
 
-`
+{% highlight java %}
+
 server.modules += ("mod_fastcgi")
 
 fastcgi.server = ( ".php" => 
@@ -70,24 +75,27 @@ fastcgi.server = ( ".php" =>
 		"idle-timeout" => 20
 	))
 )
-`
+
+{% endhighlight %}
 
 ##### OpenSSL support
 
-1. generate server.pem     自认证证书
+* generate server.pem     自认证证书
 
 `openssl req -new -x509 -keyout server.pem -out server.pem -days 3650 -nodes`
 
 > [详细信息请查询lighttpd 官网](http://www.lighttpd.net "lighttpd 官网")
 
-2. modify lighttpd.conf
+* modify lighttpd.conf
 
-`
+{% highlight java %}
+
 $SERVER["socket"] == ":443" {
 	ssl.engine = "enable"
 	ssl.pemfile = "/your/server.pem/path"
 	}
-`
+
+{% endhighlight %}
 
 ### start lighttpd server
 
@@ -105,8 +113,6 @@ $SERVER["socket"] == ":443" {
 
 1. use simple function `phpinfo();` to check if php works well
 2. access http(s)://your-server-ip/cgi-bin/phpinfo.php
-
-
 
 ### TBD
 
