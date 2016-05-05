@@ -19,10 +19,25 @@ title: heredoc - 原型文档
 **结束分界符必须位于单独一行的最前面（不允许有任何的缩进），并且后面只能跟一个分号。**
 
 {% highlight php %}
-echo <<< EOT
-somevar $var
-this var $var
+$var1 = 23;
+$var2 = 34;
+echo <<<EOT
+var1 $var1
+var2 $var2
 EOT;
 {% endhighlight %}
 
 ***
+
+## nowdoc
+
+**nowdoc 里的任何变量不会被替换为该变量的值**
+
+{% highlight php %}
+$var1 = 23;
+$var2 = 34;
+echo <<<'EOT'
+var1 $var1
+var2 $var2
+EOT;
+{% endhighlight %}
