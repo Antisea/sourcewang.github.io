@@ -2,7 +2,7 @@
 layout: default
 title: Open Source Projects
 keywords: 开源,open-source,GitHub,开源项目
-description: 开源改变世界。我是一个热衷于开源的人，也多多少于参与与创建了一些开源项目，希望在开源这条路上能做出更大更多的贡献。
+description: 开源改变世界。
 menu: Open-Source
 ---
 <div id="container-open-source">
@@ -12,7 +12,7 @@ menu: Open-Source
         <p class="lead">I have <span class="repo-count">0</span> projects on Github</p>
     </header>
     <div class="repo-list">
-      <div class="blankslate"><h3>Loading...</h3></div>
+      <div class="blankslate"><h3>Loading...w8 4 a while plz</h3></div>
     </div>
 </section>
 <div id="repo-template" style="display:none">
@@ -45,7 +45,7 @@ menu: Open-Source
         $.get('https://api.github.com/users/SourceWang/repos?type=owner',
           function(repos){
             if (!repos) {
-              repoListWrap.html('<div class="blankslate"><h3>加载失败</h3><p>请刷新或稍后再试...</p></div>');
+              repoListWrap.html('<div class="blankslate"><h3>加载失败!!</h3><p>请刷新或稍后再试...</p></div>');
             };
             
             repos = _.sortBy(repos, function(repo){

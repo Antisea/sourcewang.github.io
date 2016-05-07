@@ -4,8 +4,8 @@ email: 1154722015@qq.com
 description: SourceWang's Website - Persional blog
 keywords: wangziyuan
 skill_software_keywords: [Java, C, Python, Design Patterns]
-skill_web_keywords: [HTML, CSS, Javascript, Jquery, PHP, Boostrap]
-skill_mobile_app_keywords: [Android]
+skill_web_keywords: [HTML, CSS, Javascript, jQuery, PHP, Boostrap]
+skill_mobile_app_keywords: [Android, MUI]
 
 timezone: PRC
 encoding: "utf-8"
@@ -17,7 +17,7 @@ domain:
 permalink:     /articles/:year/:month/:title.html
 paginate_path: 'page:num'
 paginate:   10
-source_code: https://github.com/SourceWang/sourcewang.github.io/AAA.git
+source_code: https://github.com/SourceWang/sourcewang.github.io/
 
 # Build settings
 markdown:    kramdown
