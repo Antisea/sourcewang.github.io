@@ -10,25 +10,25 @@ setInterval(function(){
     $("#chuan-title").fadeOut(1000, function() {
         switch (counter % 6) {
             case 0:
-                $("#chuan-title").html("aha, Source is so cool, right?");
+                $("#chuan-title").html("Linux Device Driver 3");
                 break;
             case 1:
-                $("#chuan-title").html("I'm intrested in LDD and Web.");
+                $("#chuan-title").html("jQuery");
                 break;
             case 2:
-                $("#chuan-title").html("I'm going to be a Full Stack developer!!!");
+                $("#chuan-title").html("bootstrap");
                 break;
             case 3:
-                $("#chuan-title").html("Table tennis is my favorite.");
+                $("#chuan-title").html("Table tennis");
                 break;
             case 4:
-                $("#chuan-title").html("To be a CTO? Yeah!! It's one of my dreams.");
+                $("#chuan-title").html("hybridity app");
                 break;
             case 5:
-                $("#chuan-title").html("I believe my dreams will come true.");
+                $("#chuan-title").html("LAMP");
                 break;
             default:
-                $("#chuan-title").html("世上无难事，只要肯放弃（毒鸡汤）");
+                $("#chuan-title").html("IoT");
                 break;
         }
     });
