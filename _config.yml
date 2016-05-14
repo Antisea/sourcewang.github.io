@@ -73,4 +73,4 @@ navs:
     label: About
 
 popular_repos: ['mylighttpd', 'sourcewang.github.io', 'mfz']
-contribute_repos: ['UFreedom/YummyTime', 'UFreedom/CountDownTextView']
+contribute_repos: ['SourceWang/mylighttpd', 'SourceWang/sourcewang.github.io', 'SourceWang/mfz']
