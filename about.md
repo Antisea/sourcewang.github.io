@@ -6,7 +6,7 @@ menu: About
 ---
 {% assign current_year = site.time | date: '%Y' %}
 
-SourceWang {{ current_year }}
+SourceWang {{ current_year }} &nbsp; &nbsp; - &nbsp; [Personal Resume](http://sourcew16.com/articles/2016/05/RESUME.html "Personal Resume")
 ===
 
 ## Contact
