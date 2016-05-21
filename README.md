@@ -22,3 +22,7 @@
 ## Help
 
 > 如果你有遇到任何问题，请联系我(*if there is any problem, plz let me know,thank you.*)
+
+
+------
+[![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](http://www.yiiframework.com/ "http://www.yiiframework.com/")
