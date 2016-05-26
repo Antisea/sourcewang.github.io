@@ -58,8 +58,8 @@ menu: Open-Source
 
                 var date = new Date(repo.updated_at);
 
-                // repo.updated_at = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDay() + ' ' + date.getHours() + ':' + date.getMinutes();
-                repo.updated_at = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDay();
+                repo.updated_at = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDay() + ' ' + date.getHours() + ':' + date.getMinutes();
+                //repo.updated_at = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDay();
                 repo.language = repo.language || 'unknown';
 
                 var repoTemplate = $('#repo-template').html();
