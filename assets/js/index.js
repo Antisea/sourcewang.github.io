@@ -7,28 +7,19 @@ var counter = 0;
 setInterval(function(){
     counter += 1;
 
-    $("#chuan-title").fadeOut(1000, function() {
-        switch (counter % 6) {
+    $("#chuan-title").fadeOut(2000, function() {
+        switch (counter % 3) {
             case 0:
-                $("#chuan-title").html("Linux Device Driver 3");
+                $("#chuan-title").html("Welcome here @_@~ 3");
                 break;
             case 1:
-                $("#chuan-title").html("jQuery");
+                $("#chuan-title").html("Welcome here @_@~");
                 break;
             case 2:
-                $("#chuan-title").html("bootstrap");
-                break;
-            case 3:
-                $("#chuan-title").html("Table tennis");
-                break;
-            case 4:
-                $("#chuan-title").html("hybridity app");
-                break;
-            case 5:
-                $("#chuan-title").html("LAMP");
+                $("#chuan-title").html("Welcome here @_@~ 2");
                 break;
             default:
-                $("#chuan-title").html("IoT");
+                $("#chuan-title").html("Welcome here @_@~");
                 break;
         }
     });
