@@ -10,16 +10,16 @@ setInterval(function(){
     $("#chuan-title").fadeOut(2000, function() {
         switch (counter % 3) {
             case 0:
-                $("#chuan-title").html("Welcome here @_@~ 3");
+                $("#chuan-title").html("To Be A Full Stack Engineer");
                 break;
             case 1:
-                $("#chuan-title").html("Welcome here @_@~");
+                $("#chuan-title").html("Find Bugs And Resolve Them");
                 break;
             case 2:
-                $("#chuan-title").html("Welcome here @_@~ 2");
+                $("#chuan-title").html("Feel At Home Please");
                 break;
             default:
-                $("#chuan-title").html("Welcome here @_@~");
+                $("#chuan-title").html("Thank Your For Your Visit");
                 break;
         }
     });

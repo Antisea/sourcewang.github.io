@@ -1,4 +1,4 @@
-title: SourceWang - Source's Website
+title: Personal Notes - Source's Website
 name: SourceWang
 email: 1154722015@qq.com
 description: SourceWang's Website - Persional blog
@@ -72,5 +72,5 @@ navs:
     href: /about
     label: About
 
-popular_repos: ['mylighttpd', 'sourcewang.github.io', 'mfz']
-contribute_repos: ['SourceWang/mylighttpd', 'SourceWang/sourcewang.github.io', 'SourceWang/mfz']
+popular_repos: ['sourcewang.github.io', 'mfz']
+contribute_repos: ['SourceWang/sourcewang.github.io', 'SourceWang/mfz']
