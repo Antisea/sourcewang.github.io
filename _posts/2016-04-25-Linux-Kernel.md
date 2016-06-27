@@ -18,3 +18,4 @@ title: Linux Kernel Sendfile
 
 > 目前高并发的处理一般都是采用sendfile 模式，通过直接操作内核层数据减少应用于内核层数据传递
 
+2016-05-10-The-difference-between-buffers-and-cached.md
