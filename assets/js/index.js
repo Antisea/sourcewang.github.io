@@ -7,23 +7,23 @@ var counter = 0;
 setInterval(function(){
     counter += 1;
 
-    $("#chuan-title").fadeOut(1600, function() {
+    $("#huan-title").fadeOut(1600, function() {
         switch (counter % 3) {
             case 0:
-                $("#chuan-title").html("No Pains No Gains");
+                $("#huan-title").html("No Pains No Gains");
                 break;
             case 1:
-                $("#chuan-title").html("Find Bugs And Resolve Them");
+                $("#huan-title").html("Find Bugs And Resolve Them");
                 break;
             case 2:
-                $("#chuan-title").html("More Skills More Efforts");
+                $("#huan-title").html("More Skills More Efforts");
                 break;
             default:
-                $("#chuan-title").html("Thanks For Your Visit");
+                $("#huan-title").html("Thanks For Your Visit");
                 break;
         }
     });
-    $("#chuan-title").fadeIn(1000);
+    $("#huan-title").fadeIn(1000);
 
 }, 1400);
 
