@@ -1,9 +1,9 @@
 ---
 layout: post
-title: lighttpd 支持 pcre, zlib, openssl
+title: Lighttpd 支持 Pcre, zLib, openSSL
 ---
 
-Porting lighttpd server to arm board
+Lighttpd 在arm上的移植，支持pcre正则，zlib，openssl
 
 ## Lighttpd
 
@@ -114,5 +114,4 @@ $SERVER["socket"] == ":443" {
 1. use simple function `phpinfo();` to check if php works well
 2. access http(s)://your-server-ip/cgi-bin/phpinfo.php
 
-### TBD
 

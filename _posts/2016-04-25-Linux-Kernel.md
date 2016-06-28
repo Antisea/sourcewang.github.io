@@ -1,7 +1,9 @@
 ---
 layout: post
-title: Linux Kernel Sendfile
+title: 关于Linux的一些知识点记录
 ---
+
+linux kernel arch -- 持续更新
 
 ## Sendfile
 
