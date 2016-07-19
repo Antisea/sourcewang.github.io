@@ -28,3 +28,22 @@ linux kernel arch -- 持续更新
 
 * **buffers是用来缓冲块设备**的，它只记录文件系统的元数据（metadata）以及 tracking in-flight pages，而**cached是用来给文件做缓冲**。更通俗一点说：buffers主要用来存放目录里面有什么内容，文件的属性以及权限等等。而cached直接用来记忆我们打开过的文件和程序。
 
+## MDK3D
+
+`setenv sourcewang 'tftp 41000000 sourcewang/uImage;tftp 42000000 sourcewang/uInitrd;tftp 43000000 sourcewang/board.dtb;bootm 41000000 42000000 43000000'`
+
+`run sourcewang`
+
+`source build/envsetup.sh`
+
+`make linux` -> gen uImage and l602.dtb
+
+`make buildroot` -> uInitrd(file system)
+
+`ifconfig eth0 10.193.208.220 netmask 255.255.255.0`
+
+`route add default gw 10.193.208.1`
+
+`mount -f nfs 10.193.208.131:/tftpboot/sourcewang /mnt -o nolock`
+
+
