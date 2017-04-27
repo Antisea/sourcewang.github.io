@@ -1,5 +1,5 @@
 /**
- * Modified by sourcewang on 2016-04-23.
+ * Modified by sourcewang on 2017-04-27.
  */
 
 var counter = 0;
@@ -8,18 +8,21 @@ setInterval(function(){
     counter += 1;
 
     $("#huan-title").fadeOut(1600, function() {
-        switch (counter % 3) {
+        switch (counter % 4) {
             case 0:
                 $("#huan-title").html("No Pains No Gains");
                 break;
-            case 1:
-                $("#huan-title").html("Find Bugs And Resolve Them");
-                break;
             case 2:
-                $("#huan-title").html("More Skills More Efforts");
+                $("#huan-title").html("世界上有两样东西让人无法自拔");
+                break;
+            case 1:
+                $("#huan-title").html("一个是牙疼，另一个是爱上一个人");
+                break;
+            case 3:
+                $("#huan-title").html("只有谎言才拼命鼓吹，唯恐别人不信");
                 break;
             default:
-                $("#huan-title").html("Thanks For Your Visit");
+                $("#huan-title").html("当你看到这句话就表明不知道什么地方出现了问题，囧");
                 break;
         }
     });

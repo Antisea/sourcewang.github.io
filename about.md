@@ -1,12 +1,12 @@
 ---
 layout: page
-title: About Me
+title: 关于我 
 cv: enable
 menu: About
 ---
 {% assign current_year = site.time | date: '%Y' %}
 
-SourceWang {{ current_year }} &nbsp; &nbsp; - &nbsp; [Personal Resume](http://sourcew16.com/articles/2016/05/RESUME.html "Personal Resume")
+SourceWang {{ current_year }} &nbsp; &nbsp; - &nbsp; 勿安乐，且奋斗
 ===
 
 ## Contact

@@ -1,10 +1,10 @@
-title: Personal Notes - Source's Website
-name: SourceWang
+title: 流水不腐，户枢不蠹
+name: 王紫源
 email: 1154722015@qq.com
-description: SourceWang's Website - Persional blog
-keywords: wangziyuan
-skill_software_keywords: [Java, C, Python, Design Patterns]
-skill_web_keywords: [HTML, CSS, Javascript, jQuery, PHP, Boostrap]
+description: If you know, then you know.
+keywords: blog
+skill_software_keywords: [Java, C/C++, Python, Shell]
+skill_web_keywords: [Div+CSS, jQuery, Boostrap, Vue, PHP]
 skill_mobile_app_keywords: [Android, MUI]
 
 timezone: PRC
@@ -60,17 +60,17 @@ navs:
     href: /blog
     label: Blog
 
-  -
-    href: /footprint
-    label: Footprint
+##  -
+##    href: /footprint
+##    label: Footprint
 
-  -
-    href: /bookmark
-    label: Bookmark
+##  -
+##    href: /bookmark
+##    label: Bookmark
 
   -
     href: /about
     label: About
 
 popular_repos: ['sourcewang.github.io', 'mfz']
-contribute_repos: ['SourceWang/sourcewang.github.io', 'SourceWang/mfz']
+contribute_repos: ['SourceWang/sourcewang.github.io', 'SourceWang/mfz', 'SourceWang/tftp-for-android', 'SourceWang/misc']
