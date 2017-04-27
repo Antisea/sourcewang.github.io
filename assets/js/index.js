@@ -8,17 +8,14 @@ setInterval(function(){
     counter += 1;
 
     $("#huan-title").fadeOut(1600, function() {
-        switch (counter % 4) {
-            case 0:
-                $("#huan-title").html("No Pains No Gains");
-                break;
+        switch (counter % 3) {
             case 2:
                 $("#huan-title").html("世界上有两样东西让人无法自拔");
                 break;
             case 1:
                 $("#huan-title").html("一个是牙疼，另一个是爱上一个人");
                 break;
-            case 3:
+            case 0:
                 $("#huan-title").html("只有谎言才拼命鼓吹，唯恐别人不信");
                 break;
             default:
