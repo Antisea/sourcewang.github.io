@@ -6,7 +6,7 @@
 
 > Forked from [DONGChuan/DONGChuan.github.io](https://github.com/DONGChuan/DONGChuan.github.io "DONGChuan's Personal Blog"), thank you.
 
-## How to use
+## How To Use
 
 1. fork
 2. modify CNAME file
