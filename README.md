@@ -1,26 +1,43 @@
-# sourcewang.github.io
-隐约雷鸣，阴霾天空，但盼天有雨，能留你在此；隐约雷鸣，阴霾天空，即使天无雨，我亦留此处
+# 用法：
 
-npm install hexo-cli -g
+master 分支是网页源码
+source 分支是你看到的网页
 
-npm install hexo-deployer-git --save
+## 下载
 
-hexo g
+`git clone -b master git@github.com:sourcewang/sourcewang.github.io.git`
 
-hexo s
+## 安装
 
-hexo d
+`npm install hexo-cli -g`
 
-git pull origin master --allow-unrelated-histories
+`npm install hexo-deployer-git --save`
 
+## 测试 & 部署
 
-git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
+`hexo g`
 
+`hexo s`
 
+`hexo d`
 
+- _config.yml
+
+```
 deploy:
   type: git
   repository: git@github.com:sourcewang/sourcewang.github.io.git
   branch: source
-  
+```  
+
+## 其他
+
+~~git pull origin master --allow-unrelated-histories~~
+
+~~git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia~~
+
+# 主题使用参见：
+
+`https://github.com/ShanaMaid/hexo-theme-shana`
+
   
