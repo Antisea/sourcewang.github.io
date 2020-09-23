@@ -4,6 +4,7 @@ menu:
   Archives: /archives
   Categories: /categories
   Tags: /tags
+  About: /about
 rss: /atom.xml
 
 # Content
@@ -13,8 +14,8 @@ fancybox: true
 # Sidebar
 sidebar: left
 widgets:
-- nav
-- about
+  - nav
+  - about
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:
@@ -23,7 +24,7 @@ index_widgets:
 # - archive
 
 # widget behavior
-archive_type: 'monthly'
+archive_type: "monthly"
 show_count: false
 
 # Miscellaneous
@@ -34,30 +35,27 @@ google_plus:
 fb_admins:
 fb_app_id:
 
-
 # GalMenu - PC端右键调出，移动端长按
 # galmenu决定是否开启
 # mp3play决定是否开启音效
 galmenu: true
 mp3play: false
 gaymenu_item:
-- name: 首页
-  url : /
-- name: 标签
-  url : /tags
-- name: 分类
-  url : /categories
-- name: 归档
-  url : /archives
-- name: xxx
-  url : xxxxxxxxx
-- name: xxxx
-  url : xxxxxxx
+  - name: 家
+    url: /
+  - name: 标签
+    url: /tags
+  - name: 分类
+    url: /categories
+  - name: 归档
+    url: /archives
+  - name: 好奇
+    url: /about
 
 # 社交链接
 social:
-- url: http://github.com/ShanaMaid
-  name: Github
+  - url: http://github.com/sourcewang
+    name: Github
 
 # 友情链接
 # name : url
@@ -65,27 +63,25 @@ link_title: 友情链接
 links:
   ShanaMaid: http://blog.shanamaid.top/
 
-
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
 # 头像
 avatar: https://avatars0.githubusercontent.com/u/20333903?v=3&s=460
 
-
 # 网站统计
 # 站长统计 填写id
 # eg:　
 # CNZZ: 123456789
-CNZZ: 
+CNZZ:
 
 # 评论
 # 友言uid
-uyan: 
+uyan:
 
 # leadcloud访问次数统计
-# 
+#
 leancloud_visitors:
   enable: false
-  app_id: 
-  app_key: 
+  app_id:
+  app_key:
