@@ -6,6 +6,12 @@
 
 **在 master 分支写文章，提交到 source 分支**
 
+eg:
+
+```shell
+$ hexo new how-to-build-your-own-website
+```
+
 ## 下载
 
 `git clone -b master git@github.com:sourcewang/sourcewang.github.io.git`
